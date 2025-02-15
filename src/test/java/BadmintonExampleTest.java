@@ -19,6 +19,16 @@ public class BadmintonExampleTest {
         Assert.assertEquals("About Us", title) ;
     }
 
+    @Test
+    public void RegistrationPage(){
+        String title = home
+                .Navigate()
+                .goToMembership()
+                .title();
+        System.out.println("Title: " + title);
+        Assert.assertEquals("Register for Badminton", title) ;
+    }
+
     @After
     public void TearDown(){
         home.close();

@@ -31,4 +31,10 @@ public class Navigate extends WebdriverBase{
         return  new FAQPage(driver);
     }
 
+    public MembershipPage goToMembership(){
+        By button = By.id("menu-item-" + (int)NavButtons.Membership);
+
+        click(button);
+        return  new MembershipPage(driver);
+    }
 }
